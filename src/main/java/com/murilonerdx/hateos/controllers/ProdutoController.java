@@ -34,6 +34,8 @@ public class ProdutoController {
     }else{
       for(Produto produto : produtosList){
         long id = produto.getId();
+
+        //Chama o proximo
         produto.add(linkTo(methodOn(ProdutoController.class).getOneProduto(id)).withSelfRel());
       }
       return new ResponseEntity<List<Produto>>(produtosList, HttpStatus.OK);

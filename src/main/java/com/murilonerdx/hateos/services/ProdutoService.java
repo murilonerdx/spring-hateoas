@@ -15,7 +15,6 @@ public class ProdutoService{
 
   private final ProdutoRepository repository;
 
-
   public List<Produto> getAll(){
     return repository.findAll();
   }
